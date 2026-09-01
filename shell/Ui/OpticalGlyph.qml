@@ -26,10 +26,14 @@ Item {
   Text {
     id: glyph
     textFormat: Text.PlainText
-    // Keep the shared line box and baseline intact. Correcting only the
+    // Position explicitly with subpixel coordinates. anchors.centerIn rounds
+    // the base x to an integer before horizontalCenterOffset is applied, so
+    // the correction could never fully center the painted bounds (up to 1px
+    // off for glyphs whose tight box is wider than the advance width).
+    // Keep the shared line box and baseline intact; correcting only the
     // horizontal painted bounds avoids per-glyph vertical drift.
-    anchors.centerIn: parent
-    anchors.horizontalCenterOffset: root.horizontalCorrection
+    x: parent.width / 2 - implicitWidth / 2 + root.horizontalCorrection
+    y: parent.height / 2 - implicitHeight / 2
     text: root.text
     color: root.color
     font.family: root.fontFamily
