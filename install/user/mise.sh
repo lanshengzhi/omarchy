@@ -10,7 +10,7 @@ omarchy-mise-install gh
 omarchy-mise-install copilot
 omarchy-mise-install opencode
 omarchy-mise-install npm:playwright playwright
-omarchy-mise-install pi
+omarchy-mise-install npm:@earendil-works/pi-coding-agent pi
 omarchy-mise-install github:can1357/oh-my-pi omp
 omarchy-mise-install npm:@xai-official/grok grok
 # Cursor's own installer links the same path, so a re-provision keeps it.
