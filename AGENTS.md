@@ -131,3 +131,21 @@ omarchy-refresh-config hypr/hyprland.lua
 This copies `$OMARCHY_PATH/config/hypr/hyprland.lua` to `~/.config/hypr/hyprland.lua`. The argument
 is interpolated into both paths and only checked with `[[ -e ]]`, so pass a plain relative path: a
 name containing `..` resolves and copies, landing outside `~/.config` rather than being rejected.
+
+## Agent skills
+
+### Issue tracker
+
+Issues are tracked in GitHub Issues at `lanshengzhi/omarchy`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Triage uses the five canonical labels without overrides. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This repository uses the single-context domain documentation layout. See `docs/agents/domain.md`.
+
+### Fork workflow
+
+`quattro` mirrors `upstream/quattro` exactly; personal changes live on the `local` branch only — never commit to `quattro`. Sync with `/fork-sync` (`.pi/prompts/fork-sync.md` + `scripts/fork-sync.sh`).

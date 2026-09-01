@@ -24,7 +24,7 @@ if (($# == 0)); then
 fi
 
 case "$1" in
-pi) agent="pi"; name="Pi" ;;
+pi) agent="pi"; name="Pi"; agent_package="npm:@earendil-works/pi-coding-agent" ;;
 omp | oh-my-pi) agent="omp"; name="Oh My Pi"; agent_package="github:can1357/oh-my-pi" ;;
 opencode | open-code) agent="opencode"; name="OpenCode" ;;
 ori | openrouter) agent="ori"; name="Ori"; agent_package="github:OpenRouterLabs/ori-releases" ;;
