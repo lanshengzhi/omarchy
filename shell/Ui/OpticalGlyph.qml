@@ -27,7 +27,11 @@ Item {
   Text {
     id: glyph
     textFormat: Text.PlainText
-    // Keep the shared line box and baseline intact. Correcting only the
+    // Position explicitly with subpixel coordinates. anchors.centerIn rounds
+    // the base x to an integer before horizontalCenterOffset is applied, so
+    // the correction could never fully center the painted bounds (up to 1px
+    // off for glyphs whose tight box is wider than the advance width).
+    // Keep the shared line box and baseline intact; correcting only the
     // horizontal painted bounds avoids per-glyph vertical drift.
     // The correction is fractional, so x is set exactly: centerIn would snap it
     // to a whole pixel and undo it. y still snaps, keeping the baseline crisp.
